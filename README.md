@@ -27,33 +27,6 @@ CAD2Real separates semantic planning from geometry-grounded execution:
 
 At runtime, the system is intended to use RGB-D observations, CAD-anchored object poses, proprioception, and execution history to decide what primitive to run next and how to parameterize it.
 
-## What Is Included
-
-- Dataset format and utilities for recorded assembly episodes.
-- ROS-style trajectory log parsers for dual arms and dexterous hands.
-- Genesis replay from collected trajectories and MJCF robot assets.
-- PyTorch dataset, batching, policy model, losses, and checkpoint training.
-- Teleoperation code based on the bundled `TeleVision/` workspace.
-- Real robot scripts for dual DOBOT NOVA arms, dexterous hands, cameras, and fixed experiment sequences.
-- URDF/MJCF/mesh assets for simulation and replay.
-
-Some paper-level components, such as external VLM services, FoundationPose-style 6-DoF tracking, DINO-style visual features, cuRobo motion planning, and force-sensor training labels, require separate installation/integration depending on the hardware and deployment environment.
-
-## Repository Layout
-
-```text
-.
-├── cad2real/                  # Project paths, dataset manifests, log I/O, robot specs
-├── scripts/                   # Dataset inspection and Genesis replay entry points
-├── train.py                   # PyTorch dataset, training loop, checkpoint saving
-├── model.py                   # Multimodal Transformer policy model
-├── datasetrender.py           # Experimental Genesis rendering utilities
-├── rl_with_pretrainedmodel.py # Experimental rollout/RL utilities
-├── dataset/                   # Example collected draw episodes
-├── robot_urdf/                # MJCF, URDF, and mesh assets
-├── robot_control/             # Real robot and device control scripts
-└── TeleVision/                # Teleoperation and ACT-related components
-```
 
 ## Requirements
 
