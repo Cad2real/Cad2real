@@ -1,0 +1,14 @@
+[Unit]
+Description= start hand_control.launch from inspire_hand
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/inspire_hand_start.sh
+RemainAfterExit=no
+Restart=always
+RestartSec = 10
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target

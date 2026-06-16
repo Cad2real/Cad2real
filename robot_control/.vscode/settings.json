@@ -1,0 +1,11 @@
+{
+  "cSpell.words": [
+    "astype",
+    "Dobot",
+    "frombuffer",
+    "ndarray",
+    "Rmove",
+    "rosservice"
+  ],
+  "python.analysis.autoImportCompletions": true
+}
